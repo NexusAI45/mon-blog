@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #0B0E14;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #00F5FF;
+    color: #0B0E14;
+  }
+}
+
+@layer components {
+  .glow-text-cyan {
+    text-shadow: 0 0 10px #00F5FF, 0 0 20px #00F5FF, 0 0 40px #00F5FF33;
+  }
+
+  .glow-text-magenta {
+    text-shadow: 0 0 10px #FF007A, 0 0 20px #FF007A, 0 0 40px #FF007A33;
+  }
+
+  .glow-border-cyan {
+    box-shadow: 0 0 10px #00F5FF, inset 0 0 10px #00F5FF33;
+  }
+
+  .glow-border-magenta {
+    box-shadow: 0 0 10px #FF007A, inset 0 0 10px #FF007A33;
+  }
+
+  .scanline {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scanline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    );
+    pointer-events: none;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .hologram {
+    animation: hologram 3s ease-in-out infinite;
+  }
+
+  @keyframes hologram {
+    0%, 100% {
+      opacity: 1;
+      filter: hue-rotate(0deg);
+    }
+    50% {
+      opacity: 0.8;
+      filter: hue-rotate(10deg);
+    }
+  }
+
+  .cyber-btn {
+    @apply relative px-6 py-3 font-heading uppercase tracking-wider;
+    @apply border border-neural-cyan text-neural-cyan;
+    @apply transition-all duration-300;
+    @apply hover:bg-neural-cyan hover:text-neural-bg;
+    @apply hover:shadow-glow-cyan;
+  }
+
+  .cyber-btn::before {
+    content: '';
+    @apply absolute -inset-0.5 bg-neural-cyan opacity-0;
+    @apply transition-opacity duration-300;
+    z-index: -1;
+    filter: blur(10px);
+  }
+
+  .cyber-btn:hover::before {
+    opacity: 0.5;
+  }
+
+  .card-cyber {
+    @apply bg-neural-grid/50 border border-neural-grid;
+    @apply backdrop-blur-sm;
+    @apply transition-all duration-300;
+    @apply hover:border-neural-cyan/50 hover:shadow-glow-cyan;
+  }
+}
+
+@layer utilities {
+  .text-gradient-cyber {
+    @apply bg-gradient-to-r from-neural-cyan to-neural-magenta bg-clip-text text-transparent;
+  }
+}

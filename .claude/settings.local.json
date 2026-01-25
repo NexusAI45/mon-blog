@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__gemini__gemini-brainstorm",
+      "mcp__gemini__gemini-query",
+      "Bash(npm create:*)",
+      "Bash(npm init:*)"
+    ]
+  }
+}
