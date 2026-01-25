@@ -1,4 +1,5 @@
 import type { NotionBlock } from '../services/notion'
+import type { JSX } from 'react'
 
 interface RichText {
   plain_text: string
