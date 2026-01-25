@@ -14,7 +14,6 @@
     "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
-    "@rollup/rollup-win32-x64-msvc": "^4.56.0",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
     "@vercel/node": "^5.5.27",
