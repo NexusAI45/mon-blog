@@ -1,5 +1,7 @@
 # Choix du Style - Landing Page Blog Tech
 
+**Style actuel** : Neural Grid 2026 (option 2)
+
 Consulte chaque fichier pour voir les details complets.
 
 ---
