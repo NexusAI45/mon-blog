@@ -1,19 +1,19 @@
 export default function YouTube() {
   const videos = [
     {
-      id: 'dQw4w9WgXcQ', // Remplacer par tes vraies videos
-      title: 'Introduction a LangChain en 2026',
-      views: '12K vues',
+      id: 'Tw18-4U7mts',
+      title: 'The "vibe coding" mind virus explained… — Fireship',
+      views: 'Fireship',
     },
     {
-      id: 'dQw4w9WgXcQ',
-      title: 'Automatiser son workflow avec GitHub Actions',
-      views: '8.5K vues',
+      id: '5YBjll9XJlw',
+      title: 'Vibe Code Camp — 8h marathon avec les meilleurs vibe coders',
+      views: 'Every',
     },
     {
-      id: 'dQw4w9WgXcQ',
-      title: 'Creer un agent IA de A a Z',
-      views: '15K vues',
+      id: '8AWEPx5cHWQ',
+      title: 'Guide complet du Vibe Coding pour débutants avec Cursor',
+      views: 'Tutoriel',
     },
   ]
 
